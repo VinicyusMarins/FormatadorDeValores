@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Formatador de Valores</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <div id="input"></div>
-    <div id="output"></div> 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatador de Valores</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="box">
+    <div class="input">
+      <input id="valor" type="number" placeholder="Digite o valor">
+      <button onclick="formatar()">Formatar</button>
+    </div>
+
+    <div class="output">
+      <label for="nome">Resultado:</label>
+      <input type="text" id="nome" name="nome">
+    </div>
+  </main>
+
+  <script src="codigos.js"></script>
+</body>
 </html>
