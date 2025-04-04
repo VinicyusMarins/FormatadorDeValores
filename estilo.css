@@ -32,3 +32,27 @@ body{
 .input{
     display: grid;
 }
+
+.input>input{
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#resultado{
+    width: 200px;
+    height: 20px;
+    padding:5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #fff;
+}
+
+button{
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 8px;
+    width: 100px;
+}
