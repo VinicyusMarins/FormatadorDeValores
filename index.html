@@ -7,17 +7,35 @@
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <main class="box">
-    <div class="input">
-      <input id="valor" type="number" placeholder="Digite o valor">
-      <button onclick="formatar()">Formatar</button>
-    </div>
+  <div class="operador">
+    <select id="select" onchange="atualizar()">
+      <option value="">---Escolha---</option>
+      <option value="simples">Simples</option>
+      <option value="tintas">Tintas</option>
+      <option value="massas">Massas</option>
+    </select>
+  </div>
 
-    <div class="input">
-      <p id="resultado"></p>
-      <button id="botaoCopiar" onclick="copiar()">Copiar</button>
-    </div>
-  </main>
+  <div id="simples" class="box">
+    <input id="inputSimples" type="number" placeholder="Digite um valor">
+    <button id="btnSimples" onclick="executarTudo()">Formatar</button>
+  </div>
+
+  <div id="tintas" class="box">
+    <input id="tintaP" type="number" placeholder="3,6L:">
+    <input id="tintaG" type="number" placeholder="18L:">
+    <button id="btnTintas" onclick="executarTudo()">Formatar</button>
+  </div>
+
+  <div id="massas" class="box">
+    <input id="massaP" type="number" placeholder="5,8kg:">
+    <input id="massaG" type="number" placeholder="25kg:">
+    <button id="btnMassas" onclick="executarTudo()">Formatar</button>
+  </div>
+
+  <div id="output" class="box">
+    <p id="resultado">Output</p>
+  </div>
 
   <script src="codigos.js"></script>
 </body>
