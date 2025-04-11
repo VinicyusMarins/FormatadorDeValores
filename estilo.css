@@ -100,7 +100,7 @@ body{
 }
 
 #simples{
-    display: flex;
+    display: none;
 }
 
 #tintas{
