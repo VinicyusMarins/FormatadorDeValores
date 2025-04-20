@@ -3,6 +3,7 @@
 :root{
     --corfundo: #e6e4e4;
     --corfundo2: #bebcbc;
+    --corfundo3: #f3f3f3;
 }
 
 *{
@@ -10,42 +11,56 @@
     margin: 0px;
 }
 
+header{
+    padding: 12px;
+    background-color: var(--corfundo2);
+}
+
 body{
-    height: 97vh;
+    height: 99vh;
     display:flex;
     flex-direction: column;
     background-color: var(--corfundo);
+    font-family: sans-serif;
 }
 
 main{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex: 1;
 }
 
-.box{
-    min-height: 200px;
-    width: 500px;
-    padding: 25px;
-    background-color: var(--corfundo2);
-    border-radius: 20px 0px;   
-}
-
-article>h2{
-    padding: 18px 5px 15px 0px;
-}
-
-.input{
-    margin: -12px;
-    padding: 10px;
+.titulo_funcao{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 12px;
+    width: 400px;
+    background-color: var(--corfundo2);
+}
+
+.funcao_escondido{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+}
+
+.funcao{
+    display: flex;
     flex-direction: column;
-    background-color: var(--corfundo);
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    height: 80px;
+    width: 400px;
+    padding: 12px;
+    background-color: var(--corfundo3);
 }
 
 footer{
+    padding: 12px;
+    background-color: var(--corfundo2);
     text-align: center;
 }

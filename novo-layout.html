@@ -11,34 +11,38 @@
         <h1>Fomatador de valores</h1>
     </header>
     <main>
-        <section class="box">
-            <article id="simples">
+        <div class="completo" onmouseenter="mostrarDiv()" onmouseout="esconderDiv()">
+            <div class="titulo_funcao">
                 <h2>Simples</h2>
-                <div class="input">
-                    <input type="number" placeholder="Valor a prazo">
-                    <button>Formatar</button>
-                </div>
-            </article>
-            <article id="tintas">
-                <h2>Tintas</h2>
-                <div class="input">
-                    <input id="tintaP" type="number" placeholder="3,6L -">
-                    <input id="tintaG" type="number" placeholder="18L - ">
-                    <button>Formatar</button>
-                </div>
-            </article>
-            <article id="massas">
-                <h2>Massas</h2>
-                <div class="input">
-                    <input id="massaP" type="number" placeholder="5,8kg -">
-                    <input id="massaG" type="number" placeholder="25kg -">
-                    <button>Formatar</button>
-                </div>
-            </article>
-        </section>
+            </div>
+            <div id="simples" class="funcao_escondido">
+                <input type="number" placeholder="Digite valor a prazo:">
+                <button>Formatar</button>
+            </div>
+        </div>
+
+        <div class="titulo_funcao">
+            <h2>Tintas</h2>
+        </div>
+        <div class="funcao_escondido">
+            <input type="number" placeholder="3,6L - a prazo">
+            <input type="number" placeholder="18L - a prazo">
+            <button>Formatar</button>
+        </div>
+
+        <div class="titulo_funcao">
+            <h2>Massas</h2>
+        </div>
+        <div class="funcao_escondido">
+            <input type="number" placeholder="5,8kg - a prazo">
+            <input type="number" placeholder="25kg - a prazo">
+            <button>Formatar</button>
+        </div>
     </main>
     <footer>
-        <p>© Site criado por Vinicyus Marins</p>
+        <p>© 2025 Site criado por Vinicyus Marins</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
