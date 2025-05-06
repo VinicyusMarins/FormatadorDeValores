@@ -12,55 +12,41 @@
 }
 
 header{
-    padding: 12px;
+    height: 10vh;
     background-color: var(--corfundo2);
-}
-
-body{
-    height: 99vh;
-    display:flex;
-    flex-direction: column;
-    background-color: var(--corfundo);
-    font-family: sans-serif;
 }
 
 main{
     display: flex;
+    height: 82.3vh;
+}
+
+nav{
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex: 1;
+    width: 80px;
+    background-color: var(--corfundo);
 }
 
-.titulo_funcao{
+i{
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+section{
     display: flex;
-    padding: 12px;
-    width: 400px;
-    background-color: var(--corfundo2);
-}
-
-.funcao_escondido{
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    display: none;
-}
-
-.funcao{
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    transform: translateY(0);
-    height: 80px;
-    width: 400px;
-    padding: 12px;
-    background-color: var(--corfundo3);
+    flex-direction: column;
 }
 
 footer{
-    padding: 12px;
+    display: flex;
+    justify-content: center;
     background-color: var(--corfundo2);
-    text-align: center;
+    padding: 8px;
+    height: 5vh;
 }
