@@ -63,6 +63,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 section > div{
@@ -87,6 +88,7 @@ section > div{
 
 .box .input-position > input{
     width: 200px;
+    margin-top: 7px;
     padding: 7px;
     border-radius: 8px;
     border: none;
@@ -102,6 +104,18 @@ section > div{
     border-radius: 8px;
     border: none;
     font-family: var(--fonteInputs);
+}
+
+#format{
+    display: flex;
+}
+
+#tintas{
+    display: none;
+}
+
+#massas{
+    display: none;
 }
 
 footer{

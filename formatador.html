@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,40 @@
 <body>
     <main>
         <nav>
-            <i>
+            <i id="opcaoSimples" onclick="verificarOpcao(event)">
                 <img src="imagens/simples-icone.png" alt="Simples">
                 <p>Simples</p>
             </i>
-            <i>
+            <i id="opcaoTintas" onclick="verificarOpcao(event)">
                 <img src="imagens/tintas-icone.png" alt="Tintas">
                 <p>Tintas</p>
             </i>
-            <i>
+            <i id="opcaoMassas" onclick="verificarOpcao(event)">
                 <img src="imagens/massas-icone.png" alt="Massas">
                 <p>Massas</p>
             </i>
         </nav>
         
         <section>
-            <div class="box">
+            <div id="format" class="box">
                 <div class="input-position">
-                    <input type="number" placeholder="Digite valor a prazo">
+                    <input id="simples" type="number" placeholder="Digite valor a prazo">
+                    <button>Formatar</button>
+                </div>
+            </div>
+
+            <div id="tintas" class="box">
+                <div class="input-position">
+                    <input id="tintaP" type="number" placeholder="3,6L -">
+                    <input id="tintaG" type="number" placeholder="18L -">
+                    <button>Formatar</button>
+                </div>
+            </div>
+
+            <div id="massas" class="box">
+                <div class="input-position">
+                    <input id="massaP" type="number" placeholder="5,6kg -">
+                    <input id="massaG" type="number" placeholder="25kg -">
                     <button>Formatar</button>
                 </div>
             </div>
@@ -36,5 +52,7 @@
     <footer>
         <p>Site criado por Vinicyus Marins - 2025</p>
     </footer>
+
+    <script src="codigos/script.js"></script>
 </body>
 </html>
