@@ -34,28 +34,43 @@ nav{
     box-shadow: 2px 0px 3px rgb(0 0 0 / 29%);
 }
 
-nav>i{
+nav>button{
     cursor: pointer;
+    background-color: var(--cinza2);
     margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
     height: 35px;
     width: 130px;
     border-radius: 8px 0px;
+    border: none;
     font-style: normal;
     font-variant: small-caps;
     font-size: larger;
     letter-spacing: 2px;
+    text-align: end;
 }
 
-nav>i:hover{
+nav>button:hover{
     background-color: var(--cinza3);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.479);
 }
 
-nav>i>img{
-    margin-right: 15px;
+#opcaoSimples{
+    background-image: url(../imagens/simples-icone.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#opcaoTintas{
+    background-image: url(../imagens/tintas-icone.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#opcaoMassas{
+    background-image: url(../imagens/massas-icone.png);
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 section{
@@ -104,6 +119,31 @@ section > div{
     border-radius: 8px;
     border: none;
     font-family: var(--fonteInputs);
+}
+
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    margin-top: 15px;
+    background-color: var(--cinza2);
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.486);
+}
+
+.output > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 80px;
+    background-color: var(--cinza1);
+    border-radius: 12px;
+    color: rgb(63, 63, 63);
+    font-family: var(--fonteInputs);
+    font-size: smaller;
 }
 
 #format{

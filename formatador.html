@@ -9,18 +9,15 @@
 <body>
     <main>
         <nav>
-            <i id="opcaoSimples" onclick="verificarOpcao(event)">
-                <img src="imagens/simples-icone.png" alt="Simples">
-                <p>Simples</p>
-            </i>
-            <i id="opcaoTintas" onclick="verificarOpcao(event)">
-                <img src="imagens/tintas-icone.png" alt="Tintas">
-                <p>Tintas</p>
-            </i>
-            <i id="opcaoMassas" onclick="verificarOpcao(event)">
-                <img src="imagens/massas-icone.png" alt="Massas">
-                <p>Massas</p>
-            </i>
+            <button id="opcaoSimples" onclick="verificarOpcao(event)">
+                Simples
+            </button>
+            <button id="opcaoTintas" onclick="verificarOpcao(event)">
+                Tintas
+            </button>
+            <button id="opcaoMassas" onclick="verificarOpcao(event)">
+                Massas
+            </button>
         </nav>
         
         <section>
@@ -46,6 +43,10 @@
                     <button>Formatar</button>
                 </div>
             </div>
+
+            <article class="output">
+                <p id="resultado">Output</p>
+            </article>
         </section>
     </main>
 

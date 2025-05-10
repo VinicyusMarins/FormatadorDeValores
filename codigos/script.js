@@ -1,4 +1,4 @@
-var format = document.getElementById("format");
+var format = document.getElementById("format"); //Simples
 var tintas = document.getElementById("tintas");
 var massas = document.getElementById("massas");
 
@@ -21,4 +21,22 @@ function verificarOpcao(event) {
         tintas.style.display = "none";
         massas.style.display = "flex";
     }
+}
+
+function formatar(event){
+  const op = event.target.id;
+
+  switch(op) {
+    case "simples":
+      let valor = parseFloat(document.getElementById("simples").value);
+
+      let aprazo = valor.toFixed(2).replace(".",",");
+      avista = (valor * 0.85).toFixed(2).replace(".",",");
+    
+      resultado = `${aprazo} a prazo e ${avista} a vista`;
+
+      let output = document.getElementById("resultado");
+      output.innerText = resultado;
+    break;
+  }
 }
