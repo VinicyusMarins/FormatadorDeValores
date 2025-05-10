@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formatador de Valores</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatador</title> 
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-  <div class="operador">
-    <select id="select" onchange="atualizar()">
-      <option value="">---Escolha---</option>
-      <option value="simples">Simples</option>
-      <option value="tintas">Tintas</option>
-      <option value="massas">Massas</option>
-    </select>
-  </div>
+    <main>
+        <nav>
+            <button id="opcaoSimples" onclick="verificarOpcao(event)">
+                Simples
+            </button>
+            <button id="opcaoTintas" onclick="verificarOpcao(event)">
+                Tintas
+            </button>
+            <button id="opcaoMassas" onclick="verificarOpcao(event)">
+                Massas
+            </button>
+        </nav>
+        
+        <section>
+            <div id="format" class="box">
+                <div class="input-position">
+                    <input id="simples" type="number" placeholder="Digite valor a prazo">
+                    <button id="botaoSimples" onclick="executarSimples()">Formatar</button>
+                </div>
+            </div>
 
-  <div id="simples" class="box">
-    <input id="inputSimples" type="number" placeholder="Digite um valor">
-    <button id="btnSimples" onclick="executarTudo()">Formatar</button>
-  </div>
+            <div id="tintas" class="box">
+                <div class="input-position">
+                    <input id="tintaP" type="number" placeholder="3,6L -">
+                    <input id="tintaG" type="number" placeholder="18L -">
+                    <button id="botaoTintas" onclick="executarTintas()">Formatar</button>
+                </div>
+            </div>
 
-  <div id="tintas" class="box">
-    <input id="tintaP" type="number" placeholder="3,6L:">
-    <input id="tintaG" type="number" placeholder="18L:">
-    <button id="btnTintas" onclick="executarTudo()">Formatar</button>
-  </div>
+            <div id="massas" class="box">
+                <div class="input-position">
+                    <input id="massaP" type="number" placeholder="5,6kg -">
+                    <input id="massaG" type="number" placeholder="25kg -">
+                    <button id="botaoMassas" onclick="executarMassas()">Formatar</button>
+                </div>
+            </div>
 
-  <div id="massas" class="box">
-    <input id="massaP" type="number" placeholder="5,8kg:">
-    <input id="massaG" type="number" placeholder="25kg:">
-    <button id="btnMassas" onclick="executarTudo()">Formatar</button>
-  </div>
+            <article class="output">
+                <p id="resultado">Output</p>
+            </article>
+        </section>
+    </main>
 
-  <div id="output" class="box">
-    <p id="resultado">Output</p>
-  </div>
+    <footer>
+        <p>© Site criado por <a href="https://github.com/VinicyusMarins" target="_blank">Vinicyus Marins</a> - 2025</p>
+    </footer>
 
-  <script src="codigos.js"></script>
+    <script src="codigos/script.js"></script>
 </body>
 </html>
