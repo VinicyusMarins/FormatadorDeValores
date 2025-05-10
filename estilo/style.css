@@ -43,7 +43,7 @@ nav>button{
     margin-top: 25px;
     padding: 5px;
     height: 35px;
-    min-width: 130px;
+    min-width: 150px;
     max-width: 200px;
     border-radius: 8px 0px;
     border: 1px solid var(--cor-botoes);
