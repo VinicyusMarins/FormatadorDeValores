@@ -1,6 +1,9 @@
 var format = document.getElementById("format"); //Simples
 var tintas = document.getElementById("tintas");
 var massas = document.getElementById("massas");
+var output = document.getElementById("resultado");
+
+var resultado = 0;
 
 function verificarOpcao(event) {
     const id = event.target.id;
@@ -23,20 +26,113 @@ function verificarOpcao(event) {
     }
 }
 
-function formatar(event){
-  const op = event.target.id;
+function formatarSimples(){
+  let valor = parseFloat(document.getElementById("simples").value);
 
-  switch(op) {
-    case "simples":
-      let valor = parseFloat(document.getElementById("simples").value);
-
-      let aprazo = valor.toFixed(2).replace(".",",");
-      avista = (valor * 0.85).toFixed(2).replace(".",",");
+  let aprazo = valor.toFixed(2).replace(".",",");
+  avista = (valor * 0.85).toFixed(2).replace(".",",");
     
-      resultado = `${aprazo} a prazo e ${avista} a vista`;
+  resultado = `${aprazo} a prazo e ${avista} a vista`;
 
-      let output = document.getElementById("resultado");
-      output.innerText = resultado;
-    break;
+  output.innerText = resultado;
+}
+
+function formatarTintas(){
+  let tintaP = parseFloat(document.getElementById("tintaP").value);
+  let tintaG = parseFloat(document.getElementById("tintaG").value);
+
+  let tintaPPrazo = tintaP.toFixed(2).replace(".",",")
+  let tintaGPrazo = tintaG.toFixed(2).replace(".",",");
+  let tintaPVista = (tintaP * 0.85).toFixed(2).replace(".",",")
+  let tintaGVista = (tintaG * 0.85).toFixed(2).replace(".",",");
+  resultado = `3,6L - ${tintaPPrazo} a prazo e ${tintaPVista} à vista\n18L - ${tintaGPrazo} a prazo e ${tintaGVista} à vista`;
+
+  output.innerText = resultado;
+}
+
+function formatarMassas(){
+  let massaP = parseFloat(document.getElementById("massaP").value)
+  let massaG = parseFloat(document.getElementById("massaG").value)
+
+  let massaPPrazo = massaP.toFixed(2).replace(".",",")
+  let massaGPrazo = massaG.toFixed(2).replace(".",",")
+
+  let massaPVista = (massaP * 0.85).toFixed(2).replace(".",",")
+  let massaGVista = (massaG * 0.85).toFixed(2).replace(".",",")
+
+  resultado = `5,8kg - ${massaPPrazo} a prazo e ${massaPVista} à vista\n25kg - ${massaGPrazo} a prazo e ${massaGVista} à vista`;
+
+  output.innerText = resultado;
+}
+
+function copiarSimples(){
+  const botao = document.getElementById("botaoSimples");
+
+  navigator.clipboard.writeText(output.innerText).then(() =>{
+    botao.innerText = "Copiado!";
+    setTimeout(() => {
+      botao.innerText = "Formatar"
+    }, 1500);
+  })
+}
+
+function copiarTintas(){
+  const botao = document.getElementById("botaoTintas");
+
+  navigator.clipboard.writeText(output.innerText).then(() =>{
+    botao.innerText = "Copiado!";
+    setTimeout(() => {
+      botao.innerText = "Formatar"
+    }, 1500);
+  })
+}
+
+function copiarMassas(){
+  const botao = document.getElementById("botaoMassas");
+
+  navigator.clipboard.writeText(output.innerText).then(() =>{
+    botao.innerText = "Copiado!";
+    setTimeout(() => {
+      botao.innerText = "Formatar"
+    }, 1500);
+  })
+}
+
+function executarSimples(){
+  formatarSimples();
+  copiarSimples();
+}
+
+function executarTintas(){
+  formatarTintas();
+  copiarTintas();
+}
+
+function executarMassas(){
+  formatarMassas();
+  copiarMassas();
+}
+
+const inputs = document.querySelectorAll("input");
+
+inputs.forEach(input => {
+  input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      formatarEnter(event, input); // Passa o evento e o input como argumento
+    }
+  });
+});
+
+function formatarEnter(event, input) {
+  switch(input.id) { // Usa o ID do input para diferenciar os comandos
+    case "simples":
+      executarSimples();
+      break;
+    case "tintaG":
+      executarTintas();
+      break;
+    case "massaG":
+      executarMassas();
+      break;
   }
 }
