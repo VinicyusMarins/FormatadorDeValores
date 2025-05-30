@@ -11,10 +11,14 @@
     --fontePrincipal: "Roboto", sans-serif;
     --fonteInputs: "Enriqueta", serif;
 }
+
 *{
     padding: 0;
     margin: 0;
 }
+
+#menu{  display: none;  }
+
 body{
     height: 97vh;
     background-color: var(--fundo);

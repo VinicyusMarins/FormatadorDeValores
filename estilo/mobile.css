@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&display=swap');
+
+:root{
+    --fundo: #ebebeb;
+    --fundo-input: #46478a;
+    --cor1: #0d0153;
+    --cor2: #040018;
+    --cor-botoes: #ff7300;
+    --fontePrincipal: "Roboto", sans-serif;
+    --fonteInputs: "Enriqueta", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#tintas{    display: none;  }
+#massas{    display: none;  }
+
+html,body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--fundo);
+}
+
+#menu{
+    height: 40px;
+    width: 100vw;
+    background: var(--cor2) url(../imagens/menu.png) no-repeat center center;
+    background-size: contain;
+}
+
+#menu:hover{
+    background-color: var(--cor1);
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor2);
+}
+
+#nav-bar>button {
+    height: 35px;
+    width: 70vw;
+    margin-bottom: 3px;
+}
+
+main{
+    height: 95vh;
+}
+
+main>section{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 30vh;
+    width: 70vw;
+    background-color: var(--cor2);
+    border-radius: 15px;
+}
+
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 18vh;
+    width: 70vw;
+    background-color: var(--cor2);
+}
+
+.output>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14vh;
+    width: 65vw;
+    background-color: var(--fundo);
+}
+
+#opcaoSimples{
+    background-image: url(../imagens/simples-icone-alt.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+}
+
+#opcaoTintas{
+    background-image: url(../imagens/tintas-icone-alt.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+}
+
+#opcaoMassas{
+    background-image: url(../imagens/massas-icone-alt.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+}

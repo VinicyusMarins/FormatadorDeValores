@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatador</title> 
-    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/style.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="estilo/mobile.css" media="screen and (max-width: 600px)">
 </head>
 <body>
     <main>
-        <nav>
+        <menu id="menu"></menu>
+        <nav id="nav-bar">
             <button id="opcaoSimples" onclick="verificarOpcao(event)">
                 Simples
             </button>
