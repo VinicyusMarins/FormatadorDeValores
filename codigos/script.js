@@ -15,6 +15,14 @@ function clickMenu(){
   }
 }
 
+function mudouTamanho(){
+  if(window.innerWidth > 600){
+    navBar.style.display = 'flex'
+  } else {
+    navBar.style.display = 'none'
+  }
+}
+
 function verificarOpcao(event) {
     const id = event.target.id;
 
@@ -24,21 +32,27 @@ function verificarOpcao(event) {
         tintas.style.display = "none";
         massas.style.display = "none";
 
-        navBar.style.display = 'none'
+        if (window.innerWidth <= 600){
+          navBar.style.display = 'none'
+        }
         break;
       case "opcaoTintas":
         format.style.display = "none";
         tintas.style.display = "flex";
         massas.style.display = "none";
 
-        navBar.style.display = 'none'
+        if (window.innerWidth <= 600){
+          navBar.style.display = 'none'
+        }
         break;
       case "opcaoMassas":
         format.style.display = "none";
         tintas.style.display = "none";
         massas.style.display = "flex";
 
-        navBar.style.display = 'none'
+        if (window.innerWidth <= 600){
+          navBar.style.display = 'none'
+        }
         break;
     }
 }
