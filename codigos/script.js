@@ -5,6 +5,16 @@ var output = document.getElementById("resultado");
 
 var resultado = 0;
 
+var menu = document.querySelector('#menu')
+var navBar = document.querySelector('#nav-bar')
+function clickMenu(){
+  if (navBar.style.display == 'flex'){
+    navBar.style.display = 'none'
+  } else {
+    navBar.style.display = 'flex'
+  }
+}
+
 function verificarOpcao(event) {
     const id = event.target.id;
 
@@ -13,16 +23,23 @@ function verificarOpcao(event) {
         format.style.display = "flex";
         tintas.style.display = "none";
         massas.style.display = "none";
+
+        navBar.style.display = 'none'
         break;
       case "opcaoTintas":
         format.style.display = "none";
         tintas.style.display = "flex";
         massas.style.display = "none";
+
+        navBar.style.display = 'none'
         break;
       case "opcaoMassas":
         format.style.display = "none";
         tintas.style.display = "none";
         massas.style.display = "flex";
+
+        navBar.style.display = 'none'
+        break;
     }
 }
 
