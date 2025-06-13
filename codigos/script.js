@@ -129,21 +129,6 @@ function copiarMassas(){
   })
 }
 
-function executarSimples(){
-  formatarSimples();
-  copiarSimples();
-}
-
-function executarTintas(){
-  formatarTintas();
-  copiarTintas();
-}
-
-function executarMassas(){
-  formatarMassas();
-  copiarMassas();
-}
-
 const inputs = document.querySelectorAll("input");
 
 inputs.forEach(input => {
@@ -156,14 +141,25 @@ inputs.forEach(input => {
 
 function formatarEnter(event, input) {
   switch(input.id) { // Usa o ID do input para diferenciar os comandos
+
     case "simples":
-      executarSimples();
+      formatarSimples();
+      copiarSimples();
+      document.querySelector('input#simples').value = ''
       break;
+
     case "tintaG":
-      executarTintas();
+      formatarTintas();
+      copiarTintas();
+      document.querySelector('input#tintaP').value = ''
+      document.querySelector('input#tintaG').value = ''
       break;
+
     case "massaG":
-      executarMassas();
+      formatarMassas();
+      copiarMassas();
+      document.querySelector('input#massaP').value = ''
+      document.querySelector('input#massaG').value = ''
       break;
   }
 }
