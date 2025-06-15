@@ -158,12 +158,17 @@ function formatarEnter(event, input) {
   switch(input.id) { // Usa o ID do input para diferenciar os comandos
     case "simples":
       executarSimples();
+      document.querySelector('input#simples').value = ''
       break;
     case "tintaG":
       executarTintas();
+      document.querySelector('input#tintaP').value = ''
+      document.querySelector('input#tintaG').value = ''
       break;
     case "massaG":
       executarMassas();
+      document.querySelector('input#massaP').value = ''
+      document.querySelector('input#massaG').value = ''
       break;
   }
 }
