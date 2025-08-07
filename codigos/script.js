@@ -32,6 +32,8 @@ function verificarOpcao(event) {
         tintas.style.display = "none";
         massas.style.display = "none";
 
+        document.querySelector('#simples').focus();
+
         if (window.innerWidth <= 600){
           navBar.style.display = 'none'
         }
@@ -41,6 +43,8 @@ function verificarOpcao(event) {
         tintas.style.display = "flex";
         massas.style.display = "none";
 
+        document.querySelector('#tintaP').focus();
+
         if (window.innerWidth <= 600){
           navBar.style.display = 'none'
         }
@@ -49,6 +53,8 @@ function verificarOpcao(event) {
         format.style.display = "none";
         tintas.style.display = "none";
         massas.style.display = "flex";
+
+        document.querySelector('#massaP').focus();
 
         if (window.innerWidth <= 600){
           navBar.style.display = 'none'
@@ -224,3 +230,19 @@ function formatarEnter(event, input) {
       break;
   }
 }
+
+//foca o usuario no input do formatador aberto
+document.addEventListener('visibilitychange', () => {
+  if(document.visibilityState === 'visible'){
+    if(window.getComputedStyle(format).getPropertyValue('display') === 'flex'){
+
+      document.querySelector('#simples').focus();
+    }else if(window.getComputedStyle(tintas).getPropertyValue('display') === 'flex'){
+
+      document.querySelector('#tintaP').focus();
+    }else if(window.getComputedStyle(massas).getPropertyValue('display') === 'flex'){
+
+      document.querySelector('#massaP').focus();
+    }
+  }
+})
