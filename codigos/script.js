@@ -121,14 +121,14 @@ function formatarMassas(){
     let massaPPrazo = massaP.toFixed(2).replace(".",",");
     let massaPVista = (massaP * 0.85).toFixed(2).replace(".",",");
     
-    resultado = `3,6L - ${massaPPrazo} a prazo e ${massaPVista} à vista`;
+    resultado = `5,8kg - ${massaPPrazo} a prazo e ${massaPVista} à vista`;
     output.innerText = resultado;
 
   }else if(isNaN(massaP)){
     let massaGPrazo = massaG.toFixed(2).replace(".",",");
     let massaGVista = (massaG * 0.85).toFixed(2).replace(".",",");
     
-    resultado = `18L - ${massaGPrazo} a prazo e ${massaGVista} à vista`;
+    resultado = `25kg - ${massaGPrazo} a prazo e ${massaGVista} à vista`;
 
     output.innerText = resultado;
     
@@ -139,7 +139,7 @@ function formatarMassas(){
     let massaGPrazo = massaG.toFixed(2).replace(".",",");
     let massaGVista = (massaG * 0.85).toFixed(2).replace(".",",");
 
-    resultado = `3,6L - ${massaPPrazo} a prazo e ${massaPVista} à vista\n18L - ${massaGPrazo} a prazo e ${massaGVista} à vista`;
+    resultado = `5,8kg - ${massaPPrazo} a prazo e ${massaPVista} à vista\n25kg - ${massaGPrazo} a prazo e ${massaGVista} à vista`;
 
     output.innerText = resultado;
   }
